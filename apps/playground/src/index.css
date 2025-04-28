@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --amazigh-background: #ffffff;
+  --amazigh-text: #111827;
+  --amazigh-border: #e5e7eb;
+}
+
+.dark {
+  --amazigh-background: #111827;
+  --amazigh-text: #f9fafb;
+  --amazigh-border: #374151;
+}
+
+body {
+  background-color: var(--amazigh-background);
+  color: var(--amazigh-text);
+}
