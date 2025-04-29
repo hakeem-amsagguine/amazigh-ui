@@ -1,24 +1,58 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", "build/**"]
+      "env": [
+        "NEXT_PUBLIC_APP_URL",
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN",
+        "COMPONENTS_REGISTRY_URL",
+        "REGISTRY_URL",
+        "npm_config_user_agent",
+        "https_proxy",
+        "DEPLOYMENT_PROTECTION_BYPASS"
+      ],
+      "outputs": ["dist/**", ".next/**"]
     },
-    "test": {
-      "dependsOn": ["^build"],
-      "outputs": []
+    "preview": {
+      "env": ["NEXT_PUBLIC_APP_URL"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "start": {
+      "dependsOn": ["^build"]
     },
     "lint": {
+      "cache": false,
       "outputs": []
     },
-    "dev": {
+    "lint:fix": {
       "cache": false,
-      "persistent": true
+      "outputs": []
     },
-    "clean": {
+    "format:check": {
+      "cache": false,
+      "outputs": []
+    },
+    "format:write": {
+      "cache": false,
+      "outputs": []
+    },
+    "typecheck": {},
+    "dev": {
       "cache": false
+    },
+    "check": {
+      "cache": false
+    },
+    "test": {
+      "cache": false,
+      "outputs": []
+    },
+    "registry:build": {
+      "cache": false,
+      "outputs": []
     }
   }
 }
