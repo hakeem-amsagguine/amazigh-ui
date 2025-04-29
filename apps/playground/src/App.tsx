@@ -1,4 +1,3 @@
-// apps/playground/src/App.tsx
 import React from "react";
 import { Button, Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@amazigh-ui/components";
 import { useTheme } from "@amazigh-ui/themes";
@@ -14,7 +13,7 @@ const App: React.FC = () => {
     <div className="min-h-screen p-8">
       <div className="container mx-auto">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold mb-4">amazigh UI Playground</h1>
+          <h1 className="text-3xl font-bold mb-4">Nexa UI Playground</h1>
           <div className="flex items-center gap-4">
             <Button onClick={toggleTheme} variant="outline">
               Toggle Theme ({themeType})

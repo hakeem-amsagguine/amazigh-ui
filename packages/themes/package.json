@@ -16,11 +16,11 @@
       "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
     },
     "devDependencies": {
-      "tsup": "^6.7.0",
+      "tsup": "^7.2.0",
       "typescript": "^5.0.4"
     },
     "dependencies": {
-      "@amazigh-ui/core": "workspace:*"
+      "@amazigh-ui/core": "0.1.1"
     },
     "publishConfig": {
       "access": "public"

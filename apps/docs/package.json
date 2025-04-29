@@ -8,9 +8,9 @@
       "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf storybook-static"
     },
     "dependencies": {
-      "@amazigh-ui/components": "workspace:*",
-      "@amazigh-ui/core": "workspace:*",
-      "@amazigh-ui/themes": "workspace:*",
+      "@amazigh-ui/components": "0.1.1",
+      "@amazigh-ui/core": "0.1.1",
+      "@amazigh-ui/themes": "0.1.1",
       "react": "^18.2.0",
       "react-dom": "^18.2.0"
     },
